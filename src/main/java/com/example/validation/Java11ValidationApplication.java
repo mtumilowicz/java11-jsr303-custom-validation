@@ -1,13 +1,13 @@
-package com.example.java11jsr303customvalidation;
+package com.example.validation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Java11Jsr303CustomValidationApplication {
+public class Java11ValidationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Java11Jsr303CustomValidationApplication.class, args);
+        SpringApplication.run(Java11ValidationApplication.class, args);
     }
 
 }
