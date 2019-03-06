@@ -1,7 +1,11 @@
 package com.example.validation.app;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 /**
  * Created by mtumilowicz on 2019-03-05.
@@ -9,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
     
-    @GetMapping("/")
-    public String generic() {
-        return "Greetings!";
+    @PostMapping("/")
+    public ResponseEntity<User> generic(@RequestBody @Valid User user) {
+        return ResponseEntity.ok(user);
     }
 }
