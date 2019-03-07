@@ -11,8 +11,9 @@ import javax.validation.constraints.NotBlank;
  */
 @Value
 class User {
-    
+
     @NotBlank
+    @Word
     String name;
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
