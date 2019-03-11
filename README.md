@@ -101,3 +101,41 @@
     * `@JsonCreator` and dedicated constructor is to prevent
         _JSON parse error: cannot deserialize from Object value_,
         note that User is immutable
+* swagger: http://localhost:8080/swagger-ui.html#
+    * response for user with "%%%" as name:
+        ```
+        {
+          "timestamp": "2019-03-11T09:03:53.983+0000",
+          "status": 400,
+          "error": "Bad Request",
+          "errors": [
+            {
+              "codes": [
+                "Word.user.name",
+                "Word.name",
+                "Word.java.lang.String",
+                "Word"
+              ],
+              "arguments": [
+                {
+                  "codes": [
+                    "user.name",
+                    "name"
+                  ],
+                  "arguments": null,
+                  "defaultMessage": "name",
+                  "code": "name"
+                }
+              ],
+              "defaultMessage": "is not a proper word!",
+              "objectName": "user",
+              "field": "name",
+              "rejectedValue": "%%%",
+              "bindingFailure": false,
+              "code": "Word"
+            }
+          ],
+          "message": "Validation failed for object='user'. Error count: 1",
+          "path": "/users/register"
+        }
+        ```
