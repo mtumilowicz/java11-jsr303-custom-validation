@@ -102,7 +102,7 @@
         _JSON parse error: cannot deserialize from Object value_,
         note that User is immutable
 * swagger: http://localhost:8080/swagger-ui.html#
-    * response for user with "%%%" as name:
+    * `users/register`, response for user with `%%%` as name:
         ```
         {
           "timestamp": "2019-03-11T09:03:53.983+0000",
