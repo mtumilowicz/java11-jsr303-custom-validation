@@ -38,7 +38,7 @@
     }
     ```
     and we want to validate if a name is a proper word
-* `\w` - a word character: `[a-zA-Z_0-9]`
+* regex for a word character (`[a-zA-Z_0-9]`): `[\w]`
 * JSR303
     * annotation
         ```
@@ -99,11 +99,11 @@
         }
     }
     ```
-    * `@JsonCreator` and dedicated constructor is to prevent
+    * `@JsonCreator` and dedicated constructor are to prevent
         _JSON parse error: cannot deserialize from Object value_,
-        note that User is immutable
+        note that `User` is immutable
 * swagger: http://localhost:8080/swagger-ui.html#
-    * `users/register`, response for user with `%%%` as name:
+    * `users/register`, response for a user with `%%%` as name:
         ```
         {
           "timestamp": "2019-03-11T09:03:53.983+0000",
