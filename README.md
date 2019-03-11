@@ -23,5 +23,10 @@
     parameter or return value constraints doesn’t automatically 
     enforce these constraints, just as annotating any fields or 
     properties with bean constraints doesn’t enforce these either
+* `@Valid` - tells Spring to pass the object to a 
+    `Validator` before doing anything else
+* if the input class contains a field with another complex 
+    type that should be validated, this field, needs to be 
+    annotated with `@Valid`
 
 # project description

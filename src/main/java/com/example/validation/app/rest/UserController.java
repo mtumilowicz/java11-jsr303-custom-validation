@@ -12,10 +12,10 @@ import javax.validation.Valid;
  * Created by mtumilowicz on 2019-03-05.
  */
 @RestController
-public class HelloController {
+public class UserController {
     
     @PostMapping("/")
-    public ResponseEntity<User> generic(@RequestBody @Valid User user) {
+    public ResponseEntity<User> register(@RequestBody @Valid User user) {
         return ResponseEntity.ok(user);
     }
 }
