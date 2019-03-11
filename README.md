@@ -30,3 +30,26 @@
     annotated with `@Valid`
 
 # project description
+* we have User
+    ```
+    public class User {
+        String name;
+    }
+    ```
+    and we want to validate if a name is a proper word
+* `\w` - a word character: `[a-zA-Z_0-9]`
+* JSR303
+    * annotation
+        ```
+        @Constraint(validatedBy = WordValidator.class)
+        @Target(ElementType.FIELD)
+        @Retention(RetentionPolicy.RUNTIME)
+        public @interface Word {
+            String message() default "is not a proper word!";
+            Class<?>[] groups() default {};
+            Class<? extends Payload>[] payload() default {};
+        }
+        ```
+        * we need groups() and payload(), otherwise Internal Server Error, 500 - 
+            `"HV000074: com.example.validation.app.domain.patterns.Word contains Constraint annotation, but does not contain 
+            a groups parameter."`
