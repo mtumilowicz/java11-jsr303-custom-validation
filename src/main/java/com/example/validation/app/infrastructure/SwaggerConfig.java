@@ -1,4 +1,4 @@
-package com.example.validation.app;
+package com.example.validation.app.infrastructure;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.example.validation.app;
+package com.example.validation.app.domain.patterns;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

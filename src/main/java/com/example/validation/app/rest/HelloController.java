@@ -1,5 +1,6 @@
-package com.example.validation.app;
+package com.example.validation.app.rest;
 
+import com.example.validation.app.domain.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
