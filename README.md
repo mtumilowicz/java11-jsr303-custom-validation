@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/java11-jsr303-custom-validation.svg?branch=master)](https://travis-ci.com/mtumilowicz/java11-jsr303-custom-validation)
 # java11-jsr303-custom-validation
 
 # preface
