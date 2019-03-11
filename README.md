@@ -31,7 +31,7 @@
     annotated with `@Valid`
 
 # project description
-* we have User
+* we have `User`
     ```
     public class User {
         String name;
