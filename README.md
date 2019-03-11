@@ -85,6 +85,7 @@
 * final version of User
     ```
     @Value
+    @Builder
     public class User {
     
         @NotBlank
