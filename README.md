@@ -53,3 +53,21 @@
         * we need `groups()` and `payload()`, otherwise Internal Server Error, 500 - 
             `"HV000074: com.example.validation.app.domain.patterns.Word contains Constraint annotation, but does not contain 
             a groups parameter."`
+    * validator
+        ```
+        class WordValidator implements ConstraintValidator<Word, String> {
+        
+            private static final Predicate<String> PATTERN = Pattern.compile("[\\w]+").asMatchPredicate();
+        
+            @Override
+            public void initialize(Word word) {
+            }
+        
+            @Override
+            public boolean isValid(String word,
+                                   ConstraintValidatorContext cxt) {
+                return isNull(word) || PATTERN.test(word);
+            }
+        
+        }
+        ```
