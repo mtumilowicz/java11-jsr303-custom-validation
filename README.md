@@ -75,9 +75,10 @@
 * endpoint
     ```
     @RestController
+    @RequestMapping("/users")
     public class UserController {
         
-        @PostMapping("/")
+        @PostMapping("register")
         public ResponseEntity<User> register(@RequestBody @Valid User user) {
             return ResponseEntity.ok(user);
         }
