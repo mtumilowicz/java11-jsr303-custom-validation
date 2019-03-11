@@ -50,6 +50,6 @@
             Class<? extends Payload>[] payload() default {};
         }
         ```
-        * we need groups() and payload(), otherwise Internal Server Error, 500 - 
+        * we need `groups()` and `payload()`, otherwise Internal Server Error, 500 - 
             `"HV000074: com.example.validation.app.domain.patterns.Word contains Constraint annotation, but does not contain 
             a groups parameter."`
