@@ -71,3 +71,32 @@
         
         }
         ```
+* endpoint
+    ```
+    @RestController
+    public class UserController {
+        
+        @PostMapping("/")
+        public ResponseEntity<User> register(@RequestBody @Valid User user) {
+            return ResponseEntity.ok(user);
+        }
+    }
+    ```
+* final version of User
+    ```
+    @Value
+    public class User {
+    
+        @NotBlank
+        @Word
+        String name;
+    
+        @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
+        public User(@JsonProperty("name") String name) {
+            this.name = name;
+        }
+    }
+    ```
+    * `@JsonCreator` and dedicated constructor is to prevent
+        _JSON parse error: cannot deserialize from Object value_,
+        note that User is immutable
